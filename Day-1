@@ -1,0 +1,70 @@
+// 변수 
+let name = 'Taemin Kim'
+console.log(name1)
+name = 'Willam'
+console.log(name1)
+
+const name2 = 'Tm2'
+console.log(name2)
+
+// name2 = 'Tm3' -const '상수'는 재할당 불가능 이므로 주석처리
+
+console.log(10)
+
+let age = 37
+console.log(age)
+
+let name = 'Tm'
+console.log(name)
+
+let isMan = true
+let isWoman = false
+
+console.log(isMan)
+console.log(isWoman) // boolean
+
+// 연산자 //
+
+console.log('My' + ' car')
+console.log('1'+ 2)
+console.log
+
+const shoesPrice = 200000
+console.log('이 신발의 가격은' + shoesPrice + '원 입니다')
+console.log(`이 신발의 가격은 ${shoesPrice}원 입니다`)
+
+// 템플릿 리터럴 `${}` 을 사용해서 문자열 데이터  간결하게 사용가능
+// ** 2 제곱
+
+const shirtsPrice =100000
+const pantsPrice = 80000
+let totalPrice = 0
+
+totalPrice += shirtsPrice
+console.log(totalPrice)
+
+totalPrice += pantsPrice // totalPrice 에 pantsPrice 값을 더한을 재할당 +=
+console.log(totalPrice)
+
+totalPrice -= pantsPrice // totalPrice 에 pantsPrice 값을 뺀값을 재할당 -=
+console.log(totalPrice)
+// 비교연산자
+console.log(1 < 2) //true
+console.log(1 >= 2) //flase
+
+// 논리연산자 || or / && and / ! not 조건문과사용!
+let isOnSale = true
+console.log(!isOnSale) //false
+// === 일치연산자 대소문자 띄워쓰기 모두 일치해야 true 
+// == 는 데이터 타입도 변환해서 확인 ===는 데이터 타입이 다르면 flase 로 나옴
+
+// 퀴즈 Q.  상품 가격을 나타내는 2개의 변수를 선언하고 각각의 변수에 원하는 가격값을 할당해보아요.
+// 두 상품을 더한 가격 역시 총가격을 나타내는 변수에 할당해봅니다. 
+// 마지막으로 총가격의 20% 할인된 가격을 구해서 '총 몇 원에 물건을 구입합니다.' 라는 문자열을 출력합니다
+
+const apple = 10000
+const potato = 5000
+let totalPrice = apple + potato
+console.log(`총 ${totalPrice*0.8}원에 물건을 구입합니다.`) 
+
+//-완-
