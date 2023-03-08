@@ -1,0 +1,94 @@
+<html>
+<head>
+    <script>
+        // 배열과 메서드 //
+        let arr = new Array(); //빈 배열
+        let fruits = ["사과", "오렌지", "자두"] // 인덱스 번호는 0부터시작
+        fruits[2] = "배" // 인덱스 수정가능
+        alert(fruits.length) //배열의 요소 갯수 확인
+        // 배열 의 내장 메소드 pop,push,shift
+        // queue 에서 사용 push : 맨끝에 요소추가  
+        // 스택이라는 자료구조에서 사용 pop : 스택끝 요소 추출 push 는 queue 와 동일
+        alert(fruits.pop()); // 요소 배를 제거후 출력
+        fruits.push("배") // 배를 요소끝에 추가
+        // shift 맨앞 요소 제거후 요소 순서를 한칸씩 앞으로 당김(카드) unshift : 맨앞에 요소 추가
+        alert(fruits.shift()) // 맨앞 요소인 사과 제거 후 출력 
+        fruits.unshift('사과') // 맨앞에 사과 추가
+        // unshift와 push 는 여러개 한번에 추가가능
+        fruits.push("오렌지","배")
+        alert(fruits) // 사과,오렌지,배,오렌지,배
+        let arrr = fruits;  // 배열은 복사가 가능함
+        alert(arrr)
+
+        const itemsA = ['사과','배','바나나']
+        const index = itemsA.indexOf('바나나') // indexOf()배열에서 특정 문자열의 위치를 찾을수있음
+        itemsA.splice(index,1) // itemsA에 있는 index 번째의 요소 , 1개를 제거
+        alert(itemsA) // 사과,배
+        itemsA.indexOf('바나나') // 배열의 없는 값은 -1 로 출력
+        alert(itemsA.indexOf('바나나'))
+        itemsA.splice(1,0,'귤') // splice(index,deletecount,ex0...ex1) deletecount에  0을 입력하면 index위치에 요소 추가.
+        // splice 메서드 로 요소를 제거,추가,교체 가능
+        // itemsA.splice(0,2,"포도","자두") 
+        // 0 번부터 2개의 요소를 지우고 뒤에 다른 요소로 대체
+        // index 위치에 음수도 사용가능 -0 이 맨뒤 
+        // itemsA.length = 0 배열을 비움
+        // slice([start],[end]) start 위치의 요소 부터 end 전까지의 요소를 복사
+        itemsA.slice(-1) // -1인덱스위치부터 끝까지 복사 "귤"
+        //
+        let arr2 =[1,2]
+        // concat
+        // itemsA.concat([1,2]) 이런식으로 사용 앞의 배열의 요소 복사 +뒤에 요소를 추가해서 새로운 배열을 만듬
+        arr2.concat(3,4)
+        alert(arr2.concat(3,4)) // 1,2,3,4
+        // 원하는 요소찾기 indexOf/lastIndexOf(item, pos) 찾지못하면 -1을 반환 찾으면 해당요소의 인덱스반환환
+        alert(arr2.indexOf(1,0)) // 0
+        alert(arr2.lastIndexOf(5,0)) // -1
+        // includes(value)  배열에 value가 있으면 true 없으면 false를 반환
+        alert(arr2.includes(1)) //true
+        let matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        alert( matrix[1][2] ) // 6 다차원 배열 세로,가로 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+//
+
+
+class Notebook {
+    constructor(name,price,company) {
+        this.name = name
+        this.price = price
+        this.company = company
+    }
+}
+
+const notebook1 = new Notebook('Macbook' , 2000000 , 'Apple')
+
+console.log(notebook1)
+console.log(notebook1.name)
+console.log(notebook1.price)
+console.log(notebook1.company)
+
+class Product {
+    constructor(name, price) {
+        this.name = name
+        this.price = price
+    }
+
+    printInfo() {
+        console.log(`name:${this.name}, price:${this.price}`)
+    }
+}
+
+const notebook = new Product('Macbook', 2000000)
+
+notebook.printInfo()
