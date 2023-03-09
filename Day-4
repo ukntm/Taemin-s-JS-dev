@@ -78,6 +78,48 @@
     let sayHi = function(name) {  // (*) 마술은 일어나지 않습니다.
     alert( `Hello, ${name}` );
     };                               // 함수 표현식의 함수는 선언되기전의 함수는 작동 X
+    // 선언문이 적당하지 않을때에만 표현식으로 사용
+
+    // 화살표 함수
+    let sum = (a, b) => a + b;
+
+    /* 위 화살표 함수는 아래 함수의 축약 버전입니다.
+    let sum = function(a, b) {
+    return a + b;
+    }; */
+    
+    // 나머지 매개변수 ...를 여분 매개변수를 담을 배열앞에 쓰면됨 항상 매개변수의 마지막에 있어야함
+    function showName(firstName, lastName, ...titles) { // 여분의 매개변수를 담아서 할당 ...titles에 할당
+    alert( firstName + ' ' + lastName ); // Bora Lee
+    showName("Bora", "Lee", "Software Engineer", "Researcher");
+    // 나머지 인수들은 배열 titles의 요소가 됩니다.
+    // titles = ["Software Engineer", "Researcher"]
+    alert( titles[0] ); // Software Engineer
+    alert( titles[1] ); // Researcher
+    alert( titles.length ); // 2
+    }
+    // 스프레드 문법
+    alert( Math.max(3, 5, 1) ); // Math.max 는 인수로 받은 숫자중 가장 큰 숫자 반환 , 5
+    // 함수를 호출할 때 ...arr를 사용하면, 이터러블 객체 arr이 인수 목록으로 '확장’됩니다
+    let arr = [3, 5, 1];
+    alert( Math.max(...arr) ); // 배열을 대상으로 Math.max 호출
+    let arr1 = [1, -2, 3, 4];
+    let arr2 = [8, 3, -8, 1];
+    alert( Math.max(...arr1, ...arr2) ); // 이터러블 객체를 여러개 전달받을수도있음
+
+    /*아래와 같이 이터러블 객체 여러 개를 전달하는 것도 가능합니다.
+    let arr1 = [1, -2, 3, 4];
+    let arr2 = [8, 3, -8, 1];
+    alert( Math.max(...arr1, ...arr2) ); // 8
+    스프레드 문법을 평범한 값과 혼합해 사용하는 것도 가능하죠.
+    let arr1 = [1, -2, 3, 4];
+    let arr2 = [8, 3, -8, 1];
+    alert( Math.max(1, ...arr1, 2, ...arr2, 25) ); // 25
+    스프레드 문법은 배열을 합칠 때도 활용할 수 있습니다.
+    let arr = [3, 5, 1];
+    let arr2 = [8, 9, 15];
+    let merged = [0, ...arr, 2, ...arr2];
+    alert(merged); // 0,3,5,1,2,8,9,15 (0, arr, 2, arr2 순서로 합쳐집니다.) */
 
     </script>
 </head>
