@@ -67,4 +67,4 @@ const potato = 5000
 let totalPrice = apple + potato
 console.log(`총 ${totalPrice*0.8}원에 물건을 구입합니다.`) 
 
-//-완-
+//
