@@ -1,0 +1,94 @@
+<html>
+<head>
+<script>
+    // 매서드 만들기
+
+let user = {
+    name: "John",
+    age:30
+};
+
+user.sayHi = function() {
+    alert("안녕하세요")     // 객체 프로퍼티 user.sayHi 에 함수를 할당된것을 매서드라고 부름
+};
+
+user.sayHi();   // "안녕하세요"
+    // 아래 처럼 이미 정의된 함수를 이용해서 만들수도있음
+ function sayHi() {
+  alert("안녕하세요!");
+};
+
+user.sayHi = sayHi; // 선언된 함수를 메서드로 등록
+
+user.sayHi(); 
+// 매서드 단축 구문
+
+user = {
+  sayHi() { // "sayHi: function()"과 동일합니다.
+    alert("Hello");
+  }
+};  // function 없이도 메서드를 정의할수있음
+
+// 생성자 함수
+    function User(name) {
+    this.name = name;
+    this.isAdmin = false;
+    }
+
+    let user = new User("보라");       
+
+    alert(user.name); // 보라
+    alert(user.isAdmin); // false
+
+    let user = new User("보라"); // 는 아래 코드와 동일하게 작동한다
+    /* let user = {
+        name: "보라",
+        isAdmin: false
+    }; */
+
+    // 재사용할 필요없는 복잡한 객체를 만들때 코드를 익명 생성자 함수로 감싸주는형식
+    let user = new function() {
+        this.name = "John";
+        this.isAdmin = false;
+
+    }
+    // 생성자와 return문
+    function BigUser() {
+        this.name = " 원숭이";
+        return {name: "고릴라"};    // 객체를 return 한다면 this 대신 객체가 반환 ,원시형을 리턴하면 무시
+    }
+    alert( new BigUser().name); // 고릴라
+
+    //생성자 내 메서드
+    function User(name) {
+        this.name = name;
+        
+        this.sayHi = function() {           // 프로퍼티가 함수 = 메서드 
+            alert("제 이름은" + this.name + "입니다");  
+        };
+    }
+    
+    let bora = new User("이보라");  // bora 라는 객체에 name: "이보라" 를 할당하고 메서드 sayHi 를 더해줌
+
+    bora.sayHi(); // "제 이름은 이보라 입니다"
+
+    // 객체 순회
+    /*  Object.keys(obj) - 객체의 키만 담은 배열을 반환합니다.
+        Object.values(obj) - 객체의 값만 담은 배열을 반환합니다.
+        Object.entries(obj) - [키, 값] 쌍을 담은 배열을 반환합니다. */ 
+
+        let user = {
+            name: "John",
+            age: 30
+        };
+    // Object.keys(user) = ["name", "age"]
+    // Object.values(user) = ["John", 30]
+    // Object.entries(user) = [ ["name","John"], ["age",30] ]
+    
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
