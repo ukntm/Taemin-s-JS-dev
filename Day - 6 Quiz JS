@@ -1,0 +1,18 @@
+function solution(num1, num2) {    
+    let answer = num1 - num2;
+    return answer;
+}
+
+console.log(solution(2,1))
+
+console.clear()
+// 
+function solution(num3, num4) {
+    let answer = 0;
+    if (num3 == num4) {
+        answer = 1;
+    } else {
+        answer = -1;
+    };
+    return answer;
+}
