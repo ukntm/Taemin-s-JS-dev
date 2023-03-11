@@ -93,6 +93,26 @@
         // alert(codes[code]) // 독일, 스위스, 영국, 미국
         }
         
+        for (let code in codes) {
+        alert(code); // 1, 41, 44, 49
+        // alert(codes[code]) // 독일, 스위스, 영국, 미국
+        }
+
+        // 객체의 복사와 병합
+
+        let user2 = {
+        name: "John",
+        age: 30
+        };
+
+        let clone = {}; // 새로운 빈 객체      
+        // for in 구문을 사용해 기존 객체의 프로퍼티들을 순회해서 복사해서 넣음
+        for (let key in user2) {
+        clone[key] = user2[key];
+        }
+        
+        // Objext.assign 을 사용한 복사
+        // Object.assign(dest, [src1, src2, src3...]) dest 로 scr1,..., src3 를 복사해서 넣음
     </script>
 </head>
 <body>
