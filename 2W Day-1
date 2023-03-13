@@ -1,0 +1,87 @@
+// Quiz1
+function solution(num1, num2) {
+    let answer = num1 + num2;
+    return answer;
+}
+
+//Quiz2
+function solution(num1, num2) {
+    let answer = num1 - num2;
+    return answer;
+}
+
+//Quiz3
+function solution(num1, num2) {
+    let answer = num1 * num2;
+    return answer;
+}
+
+//Quiz4
+function solution(num1, num2) {
+    let answer = Math.floor(num1 / num2); 
+    // Math.floor 는 소수값이 존재할때 버리는역할
+    // Math.ceil 은 올림 , Math.round 는 반올림
+    return answer;                        
+}
+
+//Quiz5
+function solution(num1, num2) {
+    let answer;
+      if (num1 / num2 === 0) {
+        answer = Math.floor(num1 / num2);
+    } else {
+         answer = (num1 - (Math.floor(num1 / num2)) * num2)
+    }
+    return answer
+}
+
+// 위에가 스스로 푼것 아래가 구글링참조해서 새로적은코드
+
+function solution(num1, num2) {
+    let answer = (num1%num2);
+    return answer;
+}
+
+//Quiz6
+function solution(age) {
+    let answer = (2022 - age) +1 ;
+    return answer;
+}
+
+//Quiz7
+function solution(num1, num2) {
+    let answer = 0;
+    if (num1 == num2) {
+        answer = 1;
+    } else {
+        answer = -1;
+    };
+    return answer;
+}
+
+//Quiz8
+function solution(angle) {
+    let answer = 0;
+    if(angle < 90) {
+        answer = 1;
+    } else if (angle === 90) {
+        answer = 2;
+    } else if (angle < 180) {
+        answer = 3;
+    } else if (angle === 180) {
+        answer = 4;
+    }
+        return answer;
+}
+
+//Quiz9
+function solution(n) {
+    let answer = 0;
+    for (let i = 0; i <= n; i++) {
+        if (i % 2 === 0) {
+            answer += i;
+        }
+    }
+    return answer;
+}
+
