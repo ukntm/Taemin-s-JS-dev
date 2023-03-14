@@ -59,3 +59,5 @@ function solution(n) {
     let num = n % (Math.sqrt(n)) === 0 ? 1:2
     return num;
 }
+// Math.sqrt 는 숫자의 제곱근을 반환
+// Math.pow 는 숫자를 거듭제곱하는데사용
