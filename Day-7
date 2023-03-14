@@ -1,0 +1,61 @@
+//  Quiz1 양꼬치
+function solution(n,k) {
+    let answer;
+    let answer2 = (12000*n) + (2000*k);
+        answer = answer2 - (2000*(Math.floor(n / 10)));
+    return answer;
+}
+
+//Quiz2 피자1
+function solution(n) {
+    let answer = Math.ceil(n/7);
+    return answer;
+}
+
+//Quiz3 피자3
+function solution(slice, n) {
+    let answer = Math.ceil(n/slice);
+    return answer;
+}
+//Quiz4 점의 위치 구하기
+function solution(dot) {
+    let answer = 0;
+    if(dot[0] > 0 && dot[1] > 0) {
+        answer = 1;
+    } else if (dot[0] < 0 && dot[1] > 0) {
+        answer = 2;
+    } else if (dot[0] < 0 && dot[1] < 0) {
+        answer = 3;
+    } else if (dot[0] > 0 && dot[1] < 0) {
+        answer = 4;
+    }
+    return answer;
+}
+
+//
+
+function solution(dot) {
+    return (dot[0] > 0 && dot[1] > 0 ? 1 : dot[0] < 0 && dot[1] > 0 ? 2: dot[0] < 0 && dot[1] < 0 ? 3: dot[0] > 0 && dot[1] < 0 ? 4: 0)
+}
+
+//Quiz5 아이스 아메리카노
+function solution(money) {
+    let answer = [];
+    let ia = 5500; 
+    answer.splice(0,0,Math.floor(money/ia));
+    answer.splice(1,0,money%ia);
+    return answer;
+}
+//Quiz6 옷가게 할인 받기
+function solution(price) {
+    let price1 = price >= 100000 && price < 300000? price*0.05 : 
+                price >= 300000 && price < 500000? price*0.1 : 
+                price >= 500000 ? price*0.2 : 0
+    return Math.floor(price - price1);
+}
+
+//Quiz7 제곱수 판별하기
+function solution(n) {
+    let num = n % (Math.sqrt(n)) === 0 ? 1:2
+    return num;
+}
